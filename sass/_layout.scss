@@ -1,0 +1,99 @@
+//endpoints
+$big-screen: 75em;   //1200px  (1200/16=75em)
+$mid-screen: 56.875em;    //910px
+$small-screen:48.75em;  //777px
+$vsmall-screen:38.126em;  //600px
+$xs-screen:31.25rem;        //500px
+
+
+
+.container {
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    margin: 8rem auto;
+    max-width: 120rem;
+    min-height: 80vh;
+
+
+    @media only screen and (max-width : $big-screen) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.header {
+    border-bottom: 1px solid var(--color-Grey-light-1);
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 100;
+
+    @media only screen and (max-width : $xs-screen) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 12rem;
+     }
+}
+
+.content {
+    display: flex;
+
+    @media only screen and (max-width : $small-screen) {
+        flex-direction: column;
+    }
+}
+
+.sidebar {
+    background-color: var(--color-Grey-dark-1);
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hotel-view {
+    flex: 1;
+}
+
+.details {
+    display: flex;
+    border-bottom: 1px solid var(--color-Grey-light-1);
+    background-color: var(--color-Grey-light-1);
+    padding: 4.5rem;
+
+    @media only screen and (max-width : $mid-screen) {
+        padding: 2.5rem;
+    }
+    @media only screen and (max-width : $vsmall-screen) {
+        flex-direction: column;
+    }
+    
+    
+}
+
+.description {
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    padding: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0 1rem 5rem rgba($color: #000000, $alpha: 0.02);
+
+    @media only screen and (max-width : $mid-screen) {
+        margin-right: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    @media only screen and (max-width : $vsmall-screen) {
+        margin-bottom: 3rem;
+    }
+}
+
+.reviews {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
